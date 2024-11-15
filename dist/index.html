@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="icon" type="image/x-icon" href="Spotify Icon.png">
+    <link rel="stylesheet" href="/src/output.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body class="bg-black">
+     <header class="bg-slate-950 flex ">
+        <nav class="container mx-auto flex flex-wrap items-center justify-between py-4 px-4">
+            <div class="flex items-center space-x-4 max-md:hidden">
+                <i class='bx bx-dots-horizontal-rounded text-white text-3xl cursor-pointer hover:text-amber-300'></i>
+                <i class='bx bx-chevron-left text-white text-3xl cursor-pointer'></i>
+                <i class='bx bx-chevron-right text-white text-3xl cursor-pointer'></i>  
+                <i class='bx bxs-home text-white text-3xl cursor-pointer hover:text-amber-300 hidden md:inline'></i>         
+            </div>
+
+            <div class="md:hidden ml-0 max-md:container flex">
+                <i class='bx bxs-user-circle text-white text-5xl hover:text-amber-300 cursor-pointer max-md:inline mb-3 pt-5'></i>
+                <button class="bg-white text-black rounded-lg font-bold hover:bg-amber-300 px-3 py-3  ml-8 mr-8 mt-5 mb-1 text-2xl">
+                    All
+                </button>
+                <button class="bg-white text-black rounded-lg font-bold hover:bg-amber-300 px-3 py-3 ml-8 mr-8 mt-5 mb-1 text-2xl">
+                    Music
+                </button>
+                <button class="bg-white text-black rounded-lg font-bold hover:bg-amber-300 px-3 py-3  ml-8 mr-8 mt-5 mb-1 text-2xl">
+                    Podcasts
+                </button>
+            </div>
+    
+            <!-- Center Section - Search Bar -->
+            <div class="flex-1 flex justify-center mt-4 md:mt-0 max-md:hidden">
+                <div class="flex items-center bg-gray-800 p-2 rounded-lg w-full max-w-xs md:max-w-md lg:max-w-lg">
+                    <i class='bx bx-search text-white text-2xl mr-2'></i>
+                    <input 
+                        type="text" 
+                        placeholder="What do you want to play?" 
+                        class="bg-transparent text-white placeholder-gray-400 focus:outline-none w-full"
+                    />
+                </div>
+            </div>
+    
+            <!-- Right Section - Action Buttons -->
+            <div class="flex items-center space-x-4 mt-4 md:mt-0 max-md:hidden">
+                <button class="bg-white text-black p-2 rounded-lg font-bold hover:bg-amber-300 whitespace-nowrap">
+                    Explore Premium
+                </button>
+                <i class='bx bxs-bell text-white text-3xl hover:text-amber-500 cursor-pointer'></i>
+                <i class='bx bx-group text-white text-3xl hover:text-amber-300 cursor-pointer'></i>
+                <i class='bx bxs-user-circle text-white text-3xl hover:text-amber-300 cursor-pointer'></i>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="flex bg-gray-600 mr-4">
+        
+        <section class="ml-4 mt-8 bg-gray-600 fixed max-md:hidden">
+            <div class="w-96 pt-6 min-h-screen flex flex-1 items-start justify-between absolute">
+                <i class='bx bx-library text-3xl pl-4 pt-2 cursor-pointer hover:text-white'></i>
+                <h3 class="font-bold text-3xl pt-1">Your Library</h3>
+                <i class='bx bx-plus text-3xl cursor-pointer pr-3 pt-3 hover:text-white'></i>
+            </div>
+            <div class="text-white relative pt-36 font-bold pl-4">
+                <h1 class="ml-6 mb-2 text-2xl">Create your first playlist</h1>
+                <h1 class="ml-6 mb-3 text-sm">It's easy, we'll help you</h1>
+                <button class="ml-6 mt-3 rounded-2xl bg-cyan-50 text-black px-3 py-2 hover:bg-amber-400">Create Playlist</button>
+            </div>
+            <div class="text-white relative pt-10 font-bold pl-4">
+                <h1 class="ml-5 mb-2 text-xl">Let's find some podcasts to follow</h1>
+                <h1 class="ml-5 mb-3 text-sm">We'll keep you updated on new episodes</h1>
+                <button class="ml-5 mb-2 mt-3 rounded-2xl bg-cyan-50 text-black px-3 py-2 hover:bg-amber-500">Browse Podcasts</button>
+            </div>
+            <div class="text-white relative pt-10 pl-10 flex-col col-span-3">
+                <a href="https://www.spotify.com/in-en/legal/end-user-agreement/" class="pr-3 hover:text-blue-400 hover:underline">Legal</a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy" class="pr-3 hover:text-blue-400 hover:underline">Safety & Privacy Center</a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/" class="pr-3 hover:text-blue-400 hover:underline">Privacy Policy</a>
+            </div>
+            <div class="text-white relative pt-6 pl-10 flex-col col-span-3">
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/" class="pr-3 hover:text-blue-400 hover:underline">Cookies</a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" class="pr-3 hover:text-blue-400 hover:underline">About Ads</a>
+                <a href="https://www.spotify.com/in-en/accessibility" class="pr-3 hover:text-blue-400 hover:underline">Accessibility</a>
+            </div>
+            <div class="text-white relative px-2 py-2 ml-8 mt-5">
+                <button class="bg-white text-black rounded-2xl font-bold px-3 py-3 hover:bg-amber-400 ">English</button>
+            </div>
+        </section>
+    </div>
+    
+    <div class="ml-10">
+        <section class="flex-1 bg-gray-600 ml-96 mr-16 pl-16 mt-8 pr-8 pt-8 max-md:w-screen ">
+            <h1 class="text-white text-4xl font-bold mb-4 ml-10 mt-8">Popular Artists</h1>
+            <div class="flex flex-row">             
+                    <div class="pl-6 ml-4 mt-4 mr-5">
+                        <img src="Ar Rahman.jpg" alt="Ar Rahman" height="180px" width="200px">
+                        <h2 class="text-white font-bold pt-2 text-2xl">A.R. Rahman</h2>
+                        <h2 class="text-white ">Artist</h2>
+                    </div>
+                    <div class="pl-6 ml-4 mt-4 mr-5">
+                        <img src="Arijit Singh.jpg" alt="Ar Rahman" height="200px" width="200px">
+                        <h2 class="text-white font-bold pt-2 text-2xl">Arijit Singh</h2>
+                        <h2 class="text-white">Artist</h2>
+                    </div>
+                    <div class="pl-6 ml-4 mt-4 mr-5">
+                        <img src="ani.jpg" alt="Ar Rahman" height="100px" width="200px">
+                        <h2 class="text-white font-bold pt-2 text-2xl">Anirudh </h2>
+                        <h2 class="text-white">Artist</h2>
+                    </div>
+                    <div class="pl-6 ml-4 mt-4 mr-5">
+                        <img src="udit.jpg" alt="Ar Rahman" height="200px" width="200px">
+                        <h2 class="text-white font-bold pt-2 text-2xl">Udit Narayan</h2>
+                        <h2 class="text-white">Artist</h2>
+                    </div>
+                    <div class="pl-6 ml-4 mt-4 mr-5">
+                        <img src="Sana.jpg" alt="Ar Rahman" height="200px" width="200px">
+                        <h2 class="text-white font-bold pt-2 text-2xl">SaNa</h2>
+                        <h2 class="text-white">Artist</h2>
+                    </div>
+               
+            </div>
+
+            <div class="flex flex-row">
+                 
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="U1.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">YSR</h2>
+                    <h2 class="text-white ">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="HHT.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">HHT</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="Shreya.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Shreya Goshal</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="GVP.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">G.V Prakash</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="vidhya.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Vidya Sagar</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+           
+            </div>
+
+
+            <div class="flex flex-row">
+                 
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="ilayaraja.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Ilayaraja</h2>
+                    <h2 class="text-white ">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="karthik.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Karthik</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="Sean.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Sean Roldan</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="Harris.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Harris Jayaraj</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+                <div class="pl-6 ml-4 mt-4 mr-5">
+                    <img src="Vj antony.jpg" alt="Ar Rahman" height="200px" width="200px">
+                    <h2 class="text-white font-bold pt-2 text-2xl">Vijay Antony</h2>
+                    <h2 class="text-white">Artist</h2>
+                </div>
+           
+            </div>        
+        </section>
+    </div>
+
+
+
+    <footer class="bg-slate-950 text-gray-400 py-8 ml-96 mt-10 pl-20 ">
+        <div class="container mx-auto flex flex-wrap justify-between px-6 pl-16">
+            <!-- Company Section -->
+            <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+                <h2 class="text-white font-bold mb-3">Company</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-white">About</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Jobs</a></li>
+                    <li><a href="#" class="hover:text-white">For the Record</a></li>
+                </ul>
+            </div>
+    
+            <!-- Communities Section -->
+            <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+                <h2 class="text-white font-bold mb-3">Communities</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-white">For Artists</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Developers</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Advertising</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Investors</a></li>
+                    <li><a href="#" class="hover:text-white">Vendors</a></li>
+                </ul>
+            </div>
+    
+            <!-- Useful Links Section -->
+            <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+                <h2 class="text-white font-bold mb-3">Useful Links</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Support</a></li>
+                    <li><a href="#" class="hover:text-white">Free Mobile App</a></li>
+                </ul>
+            </div>
+    
+            <!-- Spotify Plans Section -->
+            <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+                <h2 class="text-white font-bold mb-3">Spotify Plans</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Premium Individual</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Premium Duo</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Premium Family</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-white">Premium Student</a></li>
+                    <li><a href="#" class="hover:text-white">Spotify Free</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Divider Line -->
+        <div class="border-t border-gray-700 mt-6"></div>
+    
+        <!-- Bottom Section -->
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <p class="text-gray-500 text-sm">&copy; Infant Rojar</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-500 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+</body>
+</html>
